@@ -20,6 +20,8 @@ class Profesor(models.Model):
 
     def __str__(self) -> str:
         return self.nombre
+    
+
 
 #class Turno(models.Model):
 #    nombre = models.PositiveIntegerField(unique=True)
