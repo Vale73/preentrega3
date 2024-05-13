@@ -1,0 +1,11 @@
+{% extends 'core/base.html' %}
+
+{% block titulo %}
+    <h1>Página principal</h1>
+{% endblock titulo %}
+
+{% block contenido %}
+    <div>
+        <a href="{% url 'Cliente:index' %}">Ir a cliente</a>
+    </div>
+{% endblock contenido %}
