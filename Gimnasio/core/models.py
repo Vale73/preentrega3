@@ -1,25 +1,49 @@
-from django.db import models
+#from django.db import models
 
 # Create your models here.
-class turno(models.Model):
+#class turno(models.Model):
 
-    turno = models.CharField(max_length=8)
+#    turno = models.CharField(max_length=8)
 
 
-    def __str__(self) -> str:
-        return self.turno
+#    def __str__(self) -> str:
+#        return self.turno
     
+#class Alumno(models.Model):
+#    nombre = models.CharField(max_length=8)
+
+#    def __str__(self) -> str:
+#        return self.nombre
+    
+#class Profesor(models.Model):
+#    nombre = models.CharField(max_length=8)
+
+#    def __str__(self) -> str:
+#        return self.nombre
+    
+
+from django.db import models
+
+class Turno(models.Model):
+    turno = models.CharField(max_length=8)
+    profesor = models.ForeignKey('Profesor', on_delete=models.CASCADE)
+    alumnos = models.ManyToManyField('Alumno')
+
+    def __str__(self):
+        return self.turno
+
 class Alumno(models.Model):
     nombre = models.CharField(max_length=8)
 
-    def __str__(self) -> str:
+    def __str__(self):
         return self.nombre
     
 class Profesor(models.Model):
     nombre = models.CharField(max_length=8)
 
-    def __str__(self) -> str:
+    def __str__(self):
         return self.nombre
+
     
 
 
