@@ -1,3 +1,7 @@
+
+
+
+
 {% extends 'core/base.html' %}
 
 {% block titulo %}
@@ -5,11 +9,15 @@
 {% endblock titulo %}
 
 {% block contenido %}
-    {% for Turno in turnos %}
- <h1>{{ <Turno.alumno }} {{ Turno.turno }} {{ Turno.Profesor }}</h1>
-
-        
-       
+    {% for turno in turnos %}
+        <h1>{{ turno.turno }}</h1>
+        <h2>Alumnos:</h2>
+        <ul>
+            {% for alumno in turno.alumnos.all %}
+                <li>{{ alumno.nombre }}</li>
+            {% endfor %}
+        </ul>
+        <p>Profesor: {{ turno.profesor.nombre }}</p>
     {% endfor %}
 {% endblock contenido %}
 

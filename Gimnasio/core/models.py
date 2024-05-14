@@ -1,4 +1,6 @@
 from django.db import models
+#from Alumno.models import models
+#from Profesor.models import models
 
  #Create your models here.
 
@@ -23,26 +25,20 @@ class Profesor(models.Model):
         return self.nombre
     
 
-#from django.db import models
 
 
 
-#class Alumno(models.Model):
-#    nombre = models.CharField(max_length=8)
 
-#    def __str__(self):
-#        return self.nombre
-    
-#class Profesor(models.Model):
-#    nombre = models.CharField(max_length=8)
 
-#    def __str__(self):
-#        return self.nombre
 
 
 
 #class Turno(models.Model):
 #    nombre = models.PositiveIntegerField(unique=True)
-#    turno = models.ForeignKey(Turno, on_delete=models.SET_NULL, null=True, blank=True)
+#    turno = models.ForeignKey(turno, on_delete=models.SET_NULL, null=True, blank=True)
 #    Profesor = models.ForeignKey(Profesor, on_delete=models.SET_NULL, null=True, blank=True)
 #    Alumno = models.ManyToManyField(Alumno)
+
+
+
+
