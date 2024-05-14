@@ -26,7 +26,7 @@ from django.db import models
 
 class Turno(models.Model):
     turno = models.CharField(max_length=8)
-    profesor = models.ForeignKey('Profesor', on_delete=models.CASCADE, default=None)  # Establecer un valor predeterminado, como None
+    profesor = models.ForeignKey('Profesor', on_delete=models.CASCADE, null=True)  # Establecer un valor predeterminado, como None
     alumnos = models.ManyToManyField('Alumno')
 
     def __str__(self):
