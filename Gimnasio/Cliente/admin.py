@@ -1,14 +1,8 @@
 from django.contrib import admin
 
-#from django.db import models
-from Turno.models import models
+from . import models
 
-#class Alumno(models.Model):
-#    nombre = models.CharField(max_length=100)
-#    turno = models.CharField(max_length=10, choices=(('Mañana', 'Mañana'), ('Tarde', 'Tarde')))
+admin.site.register(models.Turno)
+admin.site.register(models.Profesor)
+admin.site.register(models.Alumno)
 
-#    def __str__(self):
-#        return self.nombre
-
-
-# Register your models here.

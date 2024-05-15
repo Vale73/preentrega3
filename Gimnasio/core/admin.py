@@ -14,10 +14,3 @@
 
 
 from django.contrib import admin
-from Alumno.models import Alumno
-from Profesor.models import Profesor
-from Turno.models import Turno
-
-admin.site.register(Alumno)
-admin.site.register(Profesor)
-admin.site.register(Turno)
