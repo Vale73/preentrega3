@@ -1,5 +1,5 @@
 from django.db import models
-from Turno.models import Alumno
+
 from Profesor.models import Profesor
 from Alumno.models import Alumno
 
