@@ -24,6 +24,6 @@ class Profesor(models.Model):
 
 class turno(models.Model):
     nombre = models.PositiveIntegerField(unique=True)
-    turno = models.ForeignKey(Turno, on_delete=models.SET_NULL, null=True, blank=True)
+    Turno = models.ForeignKey(Turno, on_delete=models.SET_NULL, null=True, blank=True)
     profesor = models.ForeignKey(Profesor, on_delete=models.SET_NULL, null=True, blank=True)
     alumno = models.ManyToManyField(Alumno)
