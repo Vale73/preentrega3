@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Turnos</title>
+</head>
+<body>
+    <h1>Lista de Turnos</h1>
+    <ul>
+        {% for turno in turnos %}
+            <li>{{ turno.nombre }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

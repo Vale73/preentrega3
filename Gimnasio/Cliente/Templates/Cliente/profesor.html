@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Profesores</title>
+</head>
+<body>
+    <h1>Lista de Profesores</h1>
+    <ul>
+        {% for profesor in profesores %}
+            <li>{{ profesor.nombre }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
