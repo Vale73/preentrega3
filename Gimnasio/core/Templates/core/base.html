@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Gimnasio</title>
-    <!-- Agrega aquí tus estilos CSS personalizados si es necesario -->
+    
     <style>
-        /* Estilos para la barra de navegación */
+        
         header {
-            background-color: #0b3c5d; /* Azul oscuro */
+            background-color: #0b3c5d; 
             color: white;
             padding: 10px;
             text-align: center;
@@ -19,7 +19,7 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background-color: #0b3c5d; /* Azul oscuro */
+            background-color: #0b3c5d; 
         }
 
         nav ul li {
@@ -35,15 +35,15 @@
         }
 
         nav ul li a:hover {
-            background-color: #0e5c8b; /* Azul oscuro más claro al pasar el ratón */
+            background-color: #0e5c8b; 
         }
 
-        /* Estilos para el contenido */
+        
         main {
             padding: 20px;
         }
 
-        /* Estilos para el buscador */
+        
         input[type="text"] {
             width: 200px;
             padding: 8px;
@@ -55,7 +55,7 @@
 
         button {
             padding: 8px 20px;
-            background-color: #0b3c5d; /* Azul oscuro */
+            background-color: #0b3c5d; 
             color: white;
             border: none;
             border-radius: 5px;
@@ -63,15 +63,15 @@
         }
 
         button:hover {
-            background-color: #0e5c8b; /* Azul oscuro más claro al pasar el ratón */
+            background-color: #0e5c8b; 
         }
     </style>
 </head>
 <body>
     <header>
-        <!-- Barra para el nombre -->
+        
         <h1>Mi Gimnasio</h1>
-        <!-- Barra de buscadores con botones -->
+        
         <input type="text" placeholder="Buscar...">
         <button>Buscar</button>
     </header>
@@ -83,18 +83,18 @@
             <li><a href="{% url 'Cliente:profesor_index' %}">Profesor</a></li>
             <li><a href="{% url 'Cliente:turno_index' %}">Turnos</a></li>
             
-            <!-- Agrega más enlaces de navegación según sea necesario -->
+            
         </ul>
     </nav>
 
     <main>
-        <!-- Aquí se mostrará el contenido específico de cada página -->
+        
         {% block contenido %}
         {% endblock contenido %}
     </main>
 
     <footer>
-        <!-- Aquí puedes agregar tu pie de página si lo necesitas -->
+        
         <p>&copy; {{ year }} coder 2024</p>
     </footer>
 </body>
