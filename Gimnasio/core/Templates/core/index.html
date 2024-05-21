@@ -1,0 +1,17 @@
+<!-- core/index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu Título</title>
+</head>
+<body>
+    <h1>Bienvenido a tu aplicación</h1>
+    <div>
+        <a href="{% url 'Cliente:alumno_index' %}">Ir a alumnos</a>
+        <a href="{% url 'Cliente:turno_index' %}">Ir a turnos</a>
+        <a href="{% url 'Cliente:profesor_index' %}">Ir a profesores</a>
+        <!-- Otros enlaces o contenido aquí -->
+    </div>
+</body>
+</html>
