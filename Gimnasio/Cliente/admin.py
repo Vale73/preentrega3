@@ -1,8 +1,6 @@
 from django.contrib import admin
+from .models import Profesor, Alumno, Turno
 
-from . import models
-
-admin.site.register(models.Turno)
-admin.site.register(models.Profesor)
-admin.site.register(models.Alumno)
-
+admin.site.register(Profesor)
+admin.site.register(Alumno)
+admin.site.register(Turno)

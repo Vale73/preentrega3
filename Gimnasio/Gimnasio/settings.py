@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "core",
     "Cliente",
-    "Profesor",
 
 ]
 
@@ -58,7 +57,7 @@ ROOT_URLCONF = 'Gimnasio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'core/templates/core', BASE_DIR / 'Cliente/templates/Cliente'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

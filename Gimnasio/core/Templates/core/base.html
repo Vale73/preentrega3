@@ -3,14 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MiProyecto</title>
+    <title>Mi Gimnasio</title>
 </head>
 <body>
-    {% block titulo %} 
-    {% endblock titulo %}
+    <header>
+        <!-- Aquí puedes agregar tu encabezado si lo necesitas -->
+        <h1>Mi Gimnasio</h1>
+    </header>
 
-    {% block contenido %}
-        
-    {% endblock contenido %}
+    <nav>
+        <ul>
+            <li><a href="{% url 'Cliente:index' %}">Inicio</a></li>
+            <li><a href="{% url 'Cliente:alumno_index' %}">Alumno</a></li>
+            <li><a href="{% url 'Cliente:profesor_index' %}">Profesor</a></li>
+            <li><a href="{% url 'Cliente:turno_index' %}">Turnos</a></li>
+            <!-- Agrega más enlaces de navegación según sea necesario -->
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Aquí se mostrará el contenido específico de cada página -->
+        {% block contenido %}
+        {% endblock contenido %}
+    </main>
+
+    <footer>
+        <!-- Aquí puedes agregar tu pie de página si lo necesitas -->
+        <p>&copy; {{ year }} coder 2024</p>
+    </footer>
 </body>
 </html>
