@@ -1,35 +1,10 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal</title>
-    <!-- Agrega aquí tus enlaces a hojas de estilo CSS si las tienes -->
-</head>
-<body>
-    <header>
-        <h1>Bienvenido a Mi Gimnasio</h1>
-    </header>
+{% extends 'core/base.html' %}
 
-    <nav>
-        <ul>
-            <li><a href="{% url 'Cliente:profesor_index' %}">Ver Profesores</a></li>
-            <li><a href="{% url 'Cliente:alumno_index' %}">Ver Alumnos</a></li>
-            <li><a href="{% url 'Cliente:turno_index' %}">Ver Turnos</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <h2>Contenido Principal</h2>
-        <!-- Agrega aquí tu contenido principal si es necesario -->
-    </main>
-
-    <footer>
-        <p>&copy; {{ year }} Coder 2024 - Todos los derechos reservados</p>
-    </footer>
-</body>
-</html>
-
-
-
-
+{% block content %}
+    <h2>Listado de Alumnos:</h2>
+    <ul>
+        {% for alumno in alumnos %}
+            <li>{{ alumno.nombre }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

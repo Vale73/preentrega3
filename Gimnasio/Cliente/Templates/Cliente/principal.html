@@ -1,0 +1,33 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+    <h2>Bienvenido a Mi Gimnasio</h2>
+    <p>¡Encuentra todo lo que necesitas para tu entrenamiento aquí!</p>
+
+    <h3>Turnos Disponibles</h3>
+    <ul>
+        {% for turno in turnos %}
+            <li>{{ turno.hora }} - {{ turno.descripcion }}</li>
+        {% empty %}
+            <li>No hay turnos disponibles</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Lista de Alumnos</h3>
+    <ul>
+        {% for alumno in alumnos %}
+            <li>{{ alumno.nombre }} - {{ alumno.edad }}</li>
+        {% empty %}
+            <li>No hay alumnos registrados</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Lista de Profesores</h3>
+    <ul>
+        {% for profesor in profesores %}
+            <li>{{ profesor.nombre }} - {{ profesor.especialidad }}</li>
+        {% empty %}
+            <li>No hay profesores registrados</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

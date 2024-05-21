@@ -4,19 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Gimnasio</title>
+    <!-- Agrega aquí tus estilos CSS personalizados si es necesario -->
+    <style>
+        /* Estilos para la barra de navegación */
+        header {
+            background-color: #0b3c5d; /* Azul oscuro */
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #0b3c5d; /* Azul oscuro */
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #0e5c8b; /* Azul oscuro más claro al pasar el ratón */
+        }
+
+        /* Estilos para el contenido */
+        main {
+            padding: 20px;
+        }
+
+        /* Estilos para el buscador */
+        input[type="text"] {
+            width: 200px;
+            padding: 8px;
+            margin-top: 10px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 8px 20px;
+            background-color: #0b3c5d; /* Azul oscuro */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0e5c8b; /* Azul oscuro más claro al pasar el ratón */
+        }
+    </style>
 </head>
 <body>
     <header>
-        <!-- Aquí puedes agregar tu encabezado si lo necesitas -->
+        <!-- Barra para el nombre -->
         <h1>Mi Gimnasio</h1>
+        <!-- Barra de buscadores con botones -->
+        <input type="text" placeholder="Buscar...">
+        <button>Buscar</button>
     </header>
 
     <nav>
         <ul>
-            <li><a href="{% url 'Cliente:index' %}">Inicio</a></li>
+            <li><a href="{% url 'Cliente:pagina_principal' %}">Principal</a></li>
             <li><a href="{% url 'Cliente:alumno_index' %}">Alumno</a></li>
             <li><a href="{% url 'Cliente:profesor_index' %}">Profesor</a></li>
             <li><a href="{% url 'Cliente:turno_index' %}">Turnos</a></li>
+            
             <!-- Agrega más enlaces de navegación según sea necesario -->
         </ul>
     </nav>
